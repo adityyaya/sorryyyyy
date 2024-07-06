@@ -1,0 +1,80 @@
+/* Basic Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url('https://www.transparenttextures.com/patterns/heart-pattern.png'), linear-gradient(45deg, #ffe6e6, #f4f4f9);
+    animation: backgroundAnimation 10s infinite alternate;
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    animation: containerEntrance 1s ease-in-out;
+    max-width: 800px;
+    margin: 20px;
+}
+
+h1 {
+    color: #e91e63;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.message {
+    font-size: 1.5em;
+    margin: 20px 0;
+    color: #555;
+}
+
+.signature {
+    font-style: italic;
+    color: #555;
+    font-size: 1.2em;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 2s ease-in;
+}
+
+.slide-in {
+    animation: slideIn 2s ease-out;
+}
+
+.zoom-in {
+    animation: zoomIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.5); }
+    to { transform: scale(1); }
+}
+
+@keyframes backgroundAnimation {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}
+
+@keyframes containerEntrance {
+    0% { transform: translateY(-50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
